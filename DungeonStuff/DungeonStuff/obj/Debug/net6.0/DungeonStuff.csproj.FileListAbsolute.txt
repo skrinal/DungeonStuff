@@ -12,3 +12,17 @@ C:\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\refint\DungeonStuff.d
 C:\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.pdb
 C:\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.genruntimeconfig.cache
 C:\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\ref\DungeonStuff.dll
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\bin\Debug\net6.0\DungeonStuff.exe
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\bin\Debug\net6.0\DungeonStuff.deps.json
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\bin\Debug\net6.0\DungeonStuff.runtimeconfig.json
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\bin\Debug\net6.0\DungeonStuff.dll
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\bin\Debug\net6.0\DungeonStuff.pdb
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.dll
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\refint\DungeonStuff.dll
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.pdb
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\ref\DungeonStuff.dll

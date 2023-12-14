@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace DungeonStuff
 {
     class Menu
     {
+        static int selectedOption = 0;
         public static void SlowTextOutput(string text, int delayMilliseconds)
         {
             foreach (char c in text)
@@ -29,100 +31,84 @@ namespace DungeonStuff
             Console.WriteLine("  |________________________________________________________________________|");
         }
 
-        public static void MainMenu()
+        static void HandleSelection()
         {
-            // Basicly every text is slowly typed once you start the game
-            MenuFrame();
 
-            Console.SetCursorPosition(25, 3);
-            SlowTextOutput("Welcome to From the Beginning", 45);
+            Console.Clear();
+            switch (selectedOption)
+            {
+                case 0:
+                    Console.WriteLine("Starting the game...");
+                    Console.ReadKey();
+                    // Add your game logic here
+                    break;
 
-            Console.SetCursorPosition(33, 6);
-            SlowTextOutput("1. Start", 45);
+                case 1:
+                    Console.WriteLine("Opening settings...");
+                    // Add your settings logic here
+                    break;
 
-            Console.SetCursorPosition(33, 7);
-            SlowTextOutput("2. About", 45);
-
-            Console.SetCursorPosition(33, 8);
-            SlowTextOutput("3.", 45);
-
-            Console.SetCursorPosition(33, 10);
-            SlowTextOutput("|       |", 0);
-
-            Console.SetCursorPosition(37, 10); // Adjust the cursor position based on your layout
-
-            bool ans = false;
-            do {
-                while (ans)
-                {
-                    // Basicly every text is slowly typed once you start the game
+                case 2:
                     MenuFrame();
+                    Console.SetCursorPosition(27, 6);
+                    Console.WriteLine("Exiting the game. Goodbye!");
+                    
+                    Console.SetCursorPosition(0, 15);
+                    Environment.Exit(0);
+                    break;
+            }
+        }
+            public static void MainMenu() {
 
-                    Console.SetCursorPosition(25, 3);
-                    SlowTextOutput("Welcome to From the Beginning", 15);
+            MenuFrame();
+            Console.SetCursorPosition(25, 3);
+            //SlowTextOutput("Welcome to From the Beginning", 45); // slow text output of game name so It's cool
 
-                    Console.SetCursorPosition(33, 6);
-                    SlowTextOutput("1. Start", 0);
+            ConsoleKeyInfo key;
+            do
+            {
+                Console.Clear();
+                MenuFrame();
 
-                    Console.SetCursorPosition(33, 7);
-                    SlowTextOutput("2. About", 0);
-
-                    Console.SetCursorPosition(33, 8);
-                    SlowTextOutput("3.", 0);
-
-                    Console.SetCursorPosition(33, 10);
-                    SlowTextOutput("|       |", 0);
+                Console.SetCursorPosition(25, 3);
+                Console.WriteLine("Welcome to From the Beginning");
 
 
-                    Console.SetCursorPosition(37, 10); // Adjust the cursor position based on your layout
-                    ans = false;
-                }
+                Console.SetCursorPosition(32, 6);
+                Console.WriteLine($"  {(selectedOption == 0 ? ">" : " ")} Start");
 
-                string userInputString = Console.ReadLine();
-                int.TryParse(userInputString, out int userInput);
+                Console.SetCursorPosition(32, 7);
+                Console.WriteLine($"  {(selectedOption == 1 ? ">" : " ")} About");
 
-                switch (userInput)
+                Console.SetCursorPosition(32, 8);
+                Console.WriteLine($"  {(selectedOption == 2 ? ">" : " ")} Settings");
+
+
+                key = Console.ReadKey();
+
+                switch (key.Key)
                 {
-                    case 1:
-                        Console.Clear();
-                        Console.WriteLine("You chose 1");
-
-                        MenuFrame();
-
-                        Console.ReadKey();
-                        break;
-                    case 2:
-                        Console.Clear();
-                        Console.WriteLine("You chose 2");
-
-                        MenuFrame();
-
-                        Console.ReadKey();
+                    case ConsoleKey.W:
+                    case ConsoleKey.UpArrow:
+                        selectedOption = (selectedOption - 1 + 3) % 3;
                         break;
 
-                    default:
-                        Console.Clear();
+                    case ConsoleKey.S:
+                    case ConsoleKey.DownArrow:
+                        selectedOption = (selectedOption + 1) % 3;
+                        break;
 
-                        MenuFrame();
-
-                        Console.SetCursorPosition(31, 4);
-                        SlowTextOutput("Invalid input", 50);
-
-                        Console.SetCursorPosition(33, 6);
-                        SlowTextOutput("Try Again", 50);
-
-                        Console.SetCursorPosition(32, 9);
-                        SlowTextOutput("| Confirm |", 50);
-
-                        Console.ReadKey();
-                        Console.Clear();
-
-                        ans = true; // retypes Menu but faster
-
+                    case ConsoleKey.Enter:
+                        HandleSelection();
                         break;
                 }
-            } while (ans);
+            } while (key.Key != ConsoleKey.Escape);
 
+        }
+
+        public static void StartMenu()
+        {
+            MenuFrame();
         }
     }
 }

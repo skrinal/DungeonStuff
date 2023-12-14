@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,11 +9,34 @@ namespace DungeonStuff
 {
     class Program
     {
-        static void Main(string[] args)
+        // CHATGPT - Console fullscrean
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        [DllImport("kernel32.dll")]
+        private static extern IntPtr GetConsoleWindow();
+
+        private const int SW_SHOWMAXIMIZED = 3;
+
+        static void Main()
         {
+            // Get the handle of the console window
+            IntPtr consoleHandle = GetConsoleWindow();
+
+            // If the console window handle is obtained successfully
+            if (consoleHandle != IntPtr.Zero)
+            {
+                // Maximize the console window
+                ShowWindow(consoleHandle, SW_SHOWMAXIMIZED);
+            }
+        // CHATGPT
+
+
+            Console.CursorVisible = false;
+
             Menu.MainMenu();
-            
-            
+
+
             Dice dice = new Dice(10);
             Character Berserk = new Character("Berserk", 120, 15, 30, dice);
 
@@ -32,13 +56,10 @@ namespace DungeonStuff
             //Console.WriteLine("Boss health bar: {0}", Enemy.GraphicHealth());
 
             Combat combat = new Combat(Berserk, Mage, Healer, Monster, dice);
-            
+
             //combat.Fight();
             Console.ReadKey();
 
-
         }
-
     }
-
 }
