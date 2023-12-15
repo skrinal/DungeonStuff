@@ -1,2 +1,1 @@
-Choose a difficulty
-Difficulty: Easy, Hard, Inferno
+Choose a difficulty: Easy, Hard, Inferno
