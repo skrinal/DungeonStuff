@@ -40,7 +40,7 @@ namespace DungeonStuff
 
         public static void MenuFrame()
         {
-
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Write("  ");
             for (int i = 0; i < 116; i++)
             {
@@ -68,7 +68,7 @@ namespace DungeonStuff
             }
             Console.Write("|");
 
-            //Console.WriteLine("  |________________________________________________________________________|");
+            Console.ResetColor();
         }
 
         public static int HandleSelection()
@@ -89,20 +89,23 @@ namespace DungeonStuff
 
         public static void MainMenu()
         {
-            /*
+           // UNCOMMENT when done with game
+           /*
             if (freshStart == 0)
             {
                 MenuFrame();
                 Console.SetCursorPosition(44, 8);
-                SlowTextOutput("Welcome to From the Beginning", 45, ConsoleColor.Red);
+                SlowTextOutput("Welcome to From the Beginning", 45, ConsoleColor.Magenta);
             }
             */
 
             Console.Clear();
             MenuFrame();
+            returnNum = -1;
+
 
             Console.SetCursorPosition(44, 8);
-            ColorConsoleOutput(ConsoleColor.Red, "Welcome to From the Beginning");
+            ColorConsoleOutput(ConsoleColor.Magenta, "Welcome to From the Beginning");
 
             Console.SetCursorPosition(51, 13);
             Console.WriteLine($"  {(selectedOption == 0 ? ">" : " ")} Start");
@@ -142,9 +145,10 @@ namespace DungeonStuff
             Console.Clear();
             MenuFrame();
 
+            returnNum = -1;
 
             Console.SetCursorPosition(44, 8);
-            Console.WriteLine("Welcome to From the Beginning");
+            ColorConsoleOutput(ConsoleColor.Magenta, "Welcome to From the Beginning");
 
 
             Console.SetCursorPosition(51, 13);
@@ -153,26 +157,29 @@ namespace DungeonStuff
             Console.SetCursorPosition(51, 15);
             Console.WriteLine($"  {(selectedOption == 1 ? ">" : " ")} Hard");
 
-            Console.SetCursorPosition(49, 17);
-            ColorConsoleOutput(ConsoleColor.Red, $"  {(selectedOption == 2 ? ">" : " ")} Inferno");
-            
-            
+            Console.SetCursorPosition(47, 17);
+            ColorConsoleOutput(ConsoleColor.Red, $"  {(selectedOption == 2 ? ">" : " ")} I N F E R N O");
+
+            Console.SetCursorPosition(47, 21);
+            Console.WriteLine($"  {(selectedOption == 3 ? ">" : " ")} Back to Menu");
+
+
             key = Console.ReadKey();
 
             switch (key.Key)
             {
                 case ConsoleKey.W:
                 case ConsoleKey.UpArrow:
-                    selectedOption = (selectedOption - 1 + 3) % 3;
+                    selectedOption = (selectedOption - 1 + 4) % 4;
                     break;
 
                 case ConsoleKey.S:
                 case ConsoleKey.DownArrow:
-                    selectedOption = (selectedOption + 1) % 3;
+                    selectedOption = (selectedOption + 1) % 4;
                     break;
 
                 case ConsoleKey.Enter:
-                    HandleSelection();
+                    returnNum = HandleSelection();
                     break;
             }
 
@@ -182,7 +189,7 @@ namespace DungeonStuff
         {
             Console.Clear();
             MenuFrame();
-            Console.SetCursorPosition(27, 6);
+            Console.SetCursorPosition(44, 12);
             Console.WriteLine("Exiting the game. Goodbye!");
 
             Console.SetCursorPosition(0, 15);

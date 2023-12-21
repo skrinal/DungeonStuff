@@ -34,10 +34,63 @@ namespace DungeonStuff
         */ //CHATGPT
 
 
+            /* UNCOMMENT
             Console.CursorVisible = false;
+            bool Restart = true;
 
+            do {
+                do {
+                    Menu.MainMenu();
+                    Menu.freshStart++;
 
-            
+                    if (Menu.returnNum >= 0 && Menu.returnNum <= 4) {
+                        break;
+                    }
+
+                } while (Menu.key.Key != ConsoleKey.Escape);
+
+                if (Menu.key.Key == ConsoleKey.Escape) {
+                    Menu.ExitMenu();
+                    Restart = false; // Exit the outer loop if Escape is pressed
+                }
+                else {
+                    switch (Menu.returnNum) {
+                        case 0:
+                            do {
+
+                                Menu.StartMenu();
+                                
+                                if (Menu.returnNum == 3)
+                                {
+                                    Restart = true;
+                                    break;
+                                }
+                            } while (Menu.key.Key != ConsoleKey.Escape);
+
+                            
+
+                            if (Menu.returnNum >= 0 && Menu.returnNum <= 4) {
+                                break;
+                            }
+
+                            Console.ReadKey();
+                            break;
+                        case 1:
+                            Console.ReadKey();
+                            break;
+                        case 2:
+                            Console.ReadKey();
+                            break;
+                        case 3:
+                            Menu.ExitMenu(); // Exit
+                            Restart = false; // Exit the outer loop
+                            break;
+                    }
+                }
+
+            } while (Restart);
+
+            /* here
             do {
                 Menu.MainMenu();
                 Menu.freshStart++;
@@ -58,13 +111,33 @@ namespace DungeonStuff
             switch (Menu.returnNum)
             {
                 case 0:
-                    Menu.StartMenu();
+                    do
+                    {
+                        Menu.StartMenu();
+                    } while (Menu.key.Key != ConsoleKey.Escape);
+
+                    if (Menu.returnNum >= 0 && Menu.returnNum <= 4)
+                    {
+                        break;
+                    }
+
                     Console.ReadKey();
+                    break;
+                case 1:
+                    
+                    Console.ReadKey();
+                    break;
+                case 2:
+                    
+                    Console.ReadKey();
+                    break;
+                case 3:
+                    Menu.ExitMenu(); // Exit
                     break;
 
             }
 
-
+            */
 
 
 
@@ -91,6 +164,42 @@ namespace DungeonStuff
             //combat.Fight();
             //Console.ReadKey();
 
+
+            
+
+
+
+            ///////////////
+            Console.CursorVisible = false; // Hide the cursor for better 
+
+            Map dungeonMap = new Map(20, 40);
+
+            ConsoleKeyInfo key;
+
+            do
+            {
+                dungeonMap.DisplayMap();
+
+                key = Console.ReadKey(true);
+
+                if (key.Key == ConsoleKey.Escape)
+                    break;
+
+                dungeonMap.MovePlayer(key);
+
+            } while (true);
+
+            Console.CursorVisible = true; // Show the cursor again before exiting
+            //////////////////////////
+
+
+
+
+
+
+            Console.Clear();
+            Console.WriteLine("jeba");
+            Console.ReadKey();
         }
     }
 }
