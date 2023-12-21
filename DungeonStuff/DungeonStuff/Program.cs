@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +11,7 @@ namespace DungeonStuff
 {
     class Program
     {
-        // CHATGPT - Console fullscrean
+        /* CHATGPT - Console fullscrean
         [DllImport("user32.dll")]
         private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
@@ -17,10 +19,10 @@ namespace DungeonStuff
         private static extern IntPtr GetConsoleWindow();
 
         private const int SW_SHOWMAXIMIZED = 3;
-
+        */
         static void Main()
         {
-            // Get the handle of the console window
+            /* Get the handle of the console window
             IntPtr consoleHandle = GetConsoleWindow();
 
             // If the console window handle is obtained successfully
@@ -29,12 +31,41 @@ namespace DungeonStuff
                 // Maximize the console window
                 ShowWindow(consoleHandle, SW_SHOWMAXIMIZED);
             }
-        // CHATGPT
+        */ //CHATGPT
 
 
             Console.CursorVisible = false;
 
-            Menu.MainMenu();
+
+            
+            do {
+                Menu.MainMenu();
+                Menu.freshStart++;
+
+                if (Menu.returnNum >= 0 && Menu.returnNum <= 4)
+                {
+                    break;
+                }
+
+            } while (Menu.key.Key != ConsoleKey.Escape);
+
+           
+            if (Menu.key.Key == ConsoleKey.Escape)
+            {
+                Menu.ExitMenu();
+            }
+           
+            switch (Menu.returnNum)
+            {
+                case 0:
+                    Menu.StartMenu();
+                    Console.ReadKey();
+                    break;
+
+            }
+
+
+
 
 
             Dice dice = new Dice(10);
@@ -58,7 +89,7 @@ namespace DungeonStuff
             Combat combat = new Combat(Berserk, Mage, Healer, Monster, dice);
 
             //combat.Fight();
-            Console.ReadKey();
+            //Console.ReadKey();
 
         }
     }

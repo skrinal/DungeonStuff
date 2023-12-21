@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\Pocitac\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
+      "projectUniqueName": "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
       "projectName": "DungeonStuff",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\obj\\",
+      "projectPath": "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
+      "packagesPath": "C:\\Users\\Pocitac\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pocitac\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
