@@ -115,7 +115,7 @@ namespace DungeonStuff
             // Check if the calculated console position is within the console window bounds
             if (consoleRow >= 0 && consoleRow < Console.WindowHeight && consoleCol >= 0 && consoleCol < Console.WindowWidth)
             {
-                Console.SetCursorPosition(consoleCol + 40, consoleRow + 5);
+                Console.SetCursorPosition(consoleCol + 40, consoleRow + 5); //Fixed here
                 Console.BackgroundColor = ConsoleColor.Green;
                 Console.Write("P");
                 Console.BackgroundColor = ConsoleColor.Black;
