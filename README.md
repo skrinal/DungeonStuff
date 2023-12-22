@@ -15,4 +15,6 @@ FIX LOG
 
 SOME IDEAS
 - Migh make MAP smaller so backbpack can be seen 
+
+// Replace Enemies while on MAP with backpack and add enemies only while fighting
 ![image](https://github.com/skrinal/DungeonStuff/assets/115153680/9f1da854-89bf-4f29-be4f-2560183c77ff)
