@@ -14,4 +14,5 @@ FIX LOG
 - Menu fixed with break;
 
 SOME IDEAS
+- Migh make MAP smaller so backbpack can be seen 
 ![image](https://github.com/skrinal/DungeonStuff/assets/115153680/9f1da854-89bf-4f29-be4f-2560183c77ff)
