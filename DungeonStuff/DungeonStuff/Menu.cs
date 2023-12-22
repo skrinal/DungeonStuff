@@ -11,6 +11,9 @@ namespace DungeonStuff
         public static ConsoleKeyInfo key;
         public static int returnNum = -1;
 
+        
+
+
         public static void SlowTextOutput(string text, int delayMilliseconds)
         {
             SlowTextOutput(text, delayMilliseconds, Console.ForegroundColor);
@@ -151,8 +154,8 @@ namespace DungeonStuff
             ColorConsoleOutput(ConsoleColor.Magenta, "Welcome to From the Beginning");
 
 
-            Console.SetCursorPosition(51, 13);
-            Console.WriteLine($"  {(selectedOption == 0 ? ">" : " ")} Easy");
+            Console.SetCursorPosition(50, 13);
+            Console.WriteLine($"  {(selectedOption == 0 ? ">" : " ")} Normal");
 
             Console.SetCursorPosition(51, 15);
             Console.WriteLine($"  {(selectedOption == 1 ? ">" : " ")} Hard");

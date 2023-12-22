@@ -8,24 +8,41 @@ namespace DungeonStuff
 {
     class Character
     {
-        private string name;
-        private int health;
-        private int maxHealth;
-        private int attack;
-        private int defense;
-        //private string characterClass;
-        private Dice dice;
+        protected string name;
+        protected int health;
+        protected int maxHealth;
+        protected int attack;
+        protected int defense;
 
-        public Character(string name, int health, int attack, int defense, /*string characterClass,*/ Dice dice)
+        protected int mana;
+        protected int maxMana;
+
+        protected Dice dice;
+
+        public Character(string name, int health, int attack, int defense, Dice dice)
         {
+            // WITHOUT MANA
             this.name = name;
             this.health = health;
             this.maxHealth = health;
             this.attack = attack;
             this.defense = defense;
-            //this.characterClass = characterClass;
             this.dice = dice;
         }
+
+        public Character(string name, int health, int attack, int defense, int mana, Dice dice)
+        {
+            // WITH MANA
+            this.name = name;
+            this.health = health;
+            this.maxHealth = health;
+            this.attack = attack;
+            this.defense = defense;
+            this.mana = mana;
+            this.maxMana = mana;
+            this.dice = dice;
+        }
+
 
         public bool Alive()
         {

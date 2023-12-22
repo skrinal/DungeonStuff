@@ -11,8 +11,15 @@ namespace DungeonStuff
     {
 
         string[,] myMap;
+
+        //
         int playerRow;
         int playerCol;
+        //
+
+        private int positionOfMapRow = 40;
+        private int positionOfMapColums = 5;
+
 
         public Map(int rows, int columns)
         {
@@ -20,10 +27,10 @@ namespace DungeonStuff
 
             FillMapEdges(myMap, rows, columns);
 
-            
+
             /////////
-            playerRow = 1;
-            playerCol = 1;
+            playerRow = rows / 2 ;
+            playerCol = columns / 2 - 1;
             myMap[playerRow, playerCol] = "X"; // "P" represents the player
             ///////
         }
@@ -65,7 +72,7 @@ namespace DungeonStuff
 
             for (int i = 0; i < myMap.GetLength(0); i++)
             {
-                Console.SetCursorPosition(40, i + 5); // center
+                Console.SetCursorPosition(positionOfMapRow, i + positionOfMapColums); // center
 
                 for (int j = 0; j < myMap.GetLength(1); j++)
                 {
@@ -115,7 +122,7 @@ namespace DungeonStuff
             // Check if the calculated console position is within the console window bounds
             if (consoleRow >= 0 && consoleRow < Console.WindowHeight && consoleCol >= 0 && consoleCol < Console.WindowWidth)
             {
-                Console.SetCursorPosition(consoleCol + 40, consoleRow + 5); //Fixed here
+                Console.SetCursorPosition(consoleCol + positionOfMapRow, consoleRow + positionOfMapColums); //Fixed here
                 Console.BackgroundColor = ConsoleColor.Green;
                 Console.Write("P");
                 Console.BackgroundColor = ConsoleColor.Black;

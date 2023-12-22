@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonStuff", "DungeonStuff\DungeonStuff.csproj", "{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonStuff", "DungeonStuff\DungeonStuff.csproj", "{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Character", "Character", "{629576E2-FD56-40FC-96C6-D6707A34C809}"
+	ProjectSection(SolutionItems) = preProject
+		DungeonStuff\Character.cs = DungeonStuff\Character.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{B0F51124-FDD4-4A09-B616-81644AB1B796}"
+	ProjectSection(SolutionItems) = preProject
+		DungeonStuff\Berserk.cs = DungeonStuff\Berserk.cs
+		DungeonStuff\Healer.cs = DungeonStuff\Healer.cs
+		DungeonStuff\Mage.cs = DungeonStuff\Mage.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0F51124-FDD4-4A09-B616-81644AB1B796} = {629576E2-FD56-40FC-96C6-D6707A34C809}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA5F684D-7733-4F1D-8683-02D8731DC75F}
