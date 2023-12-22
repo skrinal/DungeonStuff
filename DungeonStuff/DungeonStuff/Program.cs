@@ -37,6 +37,7 @@ namespace DungeonStuff
         */ //CHATGPT
 
 
+
             // UNCOMMENT
             Console.CursorVisible = false;
 

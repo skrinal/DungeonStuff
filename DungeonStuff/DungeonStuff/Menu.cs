@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DungeonStuff
 {
@@ -72,6 +73,7 @@ namespace DungeonStuff
             Console.Write("|");
 
             Console.ResetColor();
+            
         }
 
         public static int HandleSelection()
@@ -107,19 +109,42 @@ namespace DungeonStuff
             returnNum = -1;
 
 
-            Console.SetCursorPosition(44, 8);
-            ColorConsoleOutput(ConsoleColor.Magenta, "Welcome to From the Beginning");
+            //OLD WAY
 
-            Console.SetCursorPosition(51, 13);
-            Console.WriteLine($"  {(selectedOption == 0 ? ">" : " ")} Start");
+            //Console.SetCursorPosition(51, 1);
+            //ColorConsoleOutput(ConsoleColor.Magenta, "Welcome to From the Beginning");
+
+
+            // DONT EVEN BOTHER TO TOUCH THIS
+            Console.SetCursorPosition(0, 2);
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine(@"
+ |
+ |              ______                     _   _            ____             _             _             
+ |             |  ____|                   | | | |          |  _ \           (_)           (_)            
+ |             | |__ _ __ ___  _ __ ___   | |_| |__   ___  | |_) | ___  __ _ _ _ __  _ __  _ _ __   __ _ 
+ |             |  __| '__/ _ \| '_ ` _ \  | __| '_ \ / _ \ |  _ < / _ \/ _` | | '_ \| '_ \| | '_ \ / _` |
+ |             | |  | | | (_) | | | | | | | |_| | | |  __/ | |_) |  __/ (_| | | | | | | | | | | | | (_| |
+ |             |_|  |_|  \___/|_| |_| |_|  \__|_| |_|\___| |____/ \___|\__, |_|_| |_|_| |_|_|_| |_|\__, |
+ |                                                                      __/ |                       __/ |
+ |                                                                     |___/                       |___/ 
+ |   
+ ");
+            Console.ResetColor();
+            // DONT EVEN BOTHER TO TOUCH THIS
+
+
 
             Console.SetCursorPosition(51, 15);
+            Console.WriteLine($"  {(selectedOption == 0 ? ">" : " ")} Start");
+
+            Console.SetCursorPosition(51, 17);
             Console.WriteLine($"  {(selectedOption == 1 ? ">" : " ")} About");
 
-            Console.SetCursorPosition(49, 17);
+            Console.SetCursorPosition(49, 19);
             Console.WriteLine($"  {(selectedOption == 2 ? ">" : " ")} Settings");
 
-            Console.SetCursorPosition(51, 19);
+            Console.SetCursorPosition(51, 21);
             Console.WriteLine($"  {(selectedOption == 3 ? ">" : " ")} Exit");
 
 
@@ -150,20 +175,40 @@ namespace DungeonStuff
 
             returnNum = -1;
 
-            Console.SetCursorPosition(44, 8);
-            ColorConsoleOutput(ConsoleColor.Magenta, "Welcome to From the Beginning");
 
 
-            Console.SetCursorPosition(50, 13);
+            //Console.SetCursorPosition(44, 2);
+            //ColorConsoleOutput(ConsoleColor.Magenta, "Choose a Difficulty"); // big / doh / doom / slant / small / standart / 
+
+
+
+            Console.SetCursorPosition(0, 4);
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine(@"
+ |                _____ _                                    _____  _  __  __ _            _ _         
+ |               / ____| |                                  |  __ \(_)/ _|/ _(_)          | | |        
+ |              | |    | |__   ___   ___  ___  ___    __ _  | |  | |_| |_| |_ _  ___ _   _| | |_ _   _ 
+ |              | |    | '_ \ / _ \ / _ \/ __|/ _ \  / _` | | |  | | |  _|  _| |/ __| | | | | __| | | |
+ |              | |____| | | | (_) | (_) \__ |  __/ | (_| | | |__| | | | | | | | (__| |_| | | |_| |_| |
+ |               \_____|_| |_|\___/ \___/|___/\___|  \__,_| |_____/|_|_| |_| |_|\___|\__,_|_|\__|\__, |
+ |                                                                                                __/ |
+ |                                                                                               |___/ 
+ ");
+            Console.ResetColor();
+
+
+
+
+            Console.SetCursorPosition(50, 15);
             Console.WriteLine($"  {(selectedOption == 0 ? ">" : " ")} Normal");
 
-            Console.SetCursorPosition(51, 15);
+            Console.SetCursorPosition(51, 17);
             Console.WriteLine($"  {(selectedOption == 1 ? ">" : " ")} Hard");
 
-            Console.SetCursorPosition(47, 17);
+            Console.SetCursorPosition(47, 19);
             ColorConsoleOutput(ConsoleColor.Red, $"  {(selectedOption == 2 ? ">" : " ")} I N F E R N O");
 
-            Console.SetCursorPosition(47, 21);
+            Console.SetCursorPosition(47, 23);
             Console.WriteLine($"  {(selectedOption == 3 ? ">" : " ")} Back to Menu");
 
 
