@@ -1,3 +1,5 @@
+Ctrl + h = replace all same words;
+
 
 
 TO DO LIST

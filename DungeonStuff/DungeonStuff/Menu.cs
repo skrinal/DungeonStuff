@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection.PortableExecutable;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace DungeonStuff
@@ -12,7 +14,11 @@ namespace DungeonStuff
         public static ConsoleKeyInfo key;
         public static int returnNum = -1;
 
-        
+        public static string nameOfPlayer = "";
+
+        public static string mainClass = "";
+
+        static ConsoleColor mainColorTheme = ConsoleColor.DarkMagenta;
 
 
         public static void SlowTextOutput(string text, int delayMilliseconds)
@@ -44,7 +50,7 @@ namespace DungeonStuff
 
         public static void MenuFrame()
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = mainColorTheme;
             Console.Write("  ");
             for (int i = 0; i < 116; i++)
             {
@@ -94,7 +100,7 @@ namespace DungeonStuff
 
         public static void MainMenu()
         {
-           // UNCOMMENT when done with game
+           // OLD WAY
            /*
             if (freshStart == 0)
             {
@@ -117,7 +123,7 @@ namespace DungeonStuff
 
             // DONT EVEN BOTHER TO TOUCH THIS
             Console.SetCursorPosition(0, 2);
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = mainColorTheme;
             Console.WriteLine(@"
  |
  |              ______                     _   _            ____             _             _             
@@ -183,16 +189,16 @@ namespace DungeonStuff
 
 
             Console.SetCursorPosition(0, 4);
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = mainColorTheme;
             Console.WriteLine(@"
- |                _____ _                                    _____  _  __  __ _            _ _         
- |               / ____| |                                  |  __ \(_)/ _|/ _(_)          | | |        
- |              | |    | |__   ___   ___  ___  ___    __ _  | |  | |_| |_| |_ _  ___ _   _| | |_ _   _ 
- |              | |    | '_ \ / _ \ / _ \/ __|/ _ \  / _` | | |  | | |  _|  _| |/ __| | | | | __| | | |
- |              | |____| | | | (_) | (_) \__ |  __/ | (_| | | |__| | | | | | | | (__| |_| | | |_| |_| |
- |               \_____|_| |_|\___/ \___/|___/\___|  \__,_| |_____/|_|_| |_| |_|\___|\__,_|_|\__|\__, |
- |                                                                                                __/ |
- |                                                                                               |___/ 
+ |                           _____    _    __    __   _                  _   _           
+ |                          |  __ \  (_)  / _|  / _| (_)                | | | |          
+ |                          | |  | |  _  | |_  | |_   _    ___   _   _  | | | |_   _   _ 
+ |                          | |  | | | | |  _| |  _| | |  / __| | | | | | | | __| | | | |
+ |                          | |__| | | | | |   | |   | | | (__  | |_| | | | | |_  | |_| |
+ |                          |_____/  |_| |_|   |_|   |_|  \___|  \__,_| |_|  \__|  \__, |
+ |                                                                                  __/ |
+ |                                                                                 |___/ 
  ");
             Console.ResetColor();
 
@@ -231,6 +237,111 @@ namespace DungeonStuff
                     break;
             }
 
+        }
+
+
+        public static void MainClassMenu()
+        {
+            Console.Clear();
+            MenuFrame();
+
+            returnNum = -1;
+
+
+
+            //Console.SetCursorPosition(44, 2);
+            //ColorConsoleOutput(ConsoleColor.Magenta, "Choose a Difficulty"); // big / doh / doom / slant / small / standart / 
+
+
+
+            Console.SetCursorPosition(0, 4);
+            Console.ForegroundColor = mainColorTheme;
+            Console.WriteLine(@"
+ |                             __  __           _              _____   _                     
+ |                            |  \/  |         (_)            / ____| | |                    
+ |                            | \  / |   __ _   _   _ __     | |      | |   __ _   ___   ___ 
+ |                            | |\/| |  / _` | | | | '_ \    | |      | |  / _` | / __| / __|
+ |                            | |  | | | (_| | | | | | | |   | |____  | | | (_| | \__ \ \__ \
+ |                            |_|  |_|  \__,_| |_| |_| |_|    \_____| |_|  \__,_| |___/ |___/ 
+ ");
+            Console.ResetColor();
+
+
+
+
+            Console.SetCursorPosition(47, 15);
+            ColorConsoleOutput(ConsoleColor.Red, $"  {(selectedOption == 0 ? ">" : " ")} Shadow Fury Berserk");
+
+            Console.SetCursorPosition(50, 17);
+            ColorConsoleOutput(ConsoleColor.DarkMagenta, $"  {(selectedOption == 1 ? ">" : " ")} Undead Mage");
+
+            Console.SetCursorPosition(47, 19);
+            ColorConsoleOutput(ConsoleColor.Yellow, $"  {(selectedOption == 2 ? ">" : " ")} Lunar Shadow Healer");
+
+
+
+            Console.SetCursorPosition(47, 23);
+            Console.WriteLine($"  {(selectedOption == 3 ? ">" : " ")} Back to Difficulty");
+
+
+            key = Console.ReadKey();
+
+            switch (key.Key)
+            {
+                case ConsoleKey.W:
+                case ConsoleKey.UpArrow:
+                    selectedOption = (selectedOption - 1 + 4) % 4;
+                    break;
+
+                case ConsoleKey.S:
+                case ConsoleKey.DownArrow:
+                    selectedOption = (selectedOption + 1) % 4;
+                    break;
+
+                case ConsoleKey.Enter:
+                    returnNum = HandleSelection();
+                    break;
+            }
+        }
+
+
+        public static void YourNameMenu()
+        {
+            Console.CursorVisible = false;
+            while (true)
+            {
+                Console.Clear();
+                Console.SetCursorPosition(0, 0);
+                MenuFrame();
+
+                Console.SetCursorPosition(0, 4);
+                Console.ForegroundColor = mainColorTheme;
+                Console.WriteLine(@"
+ |                            __     __                   _   _                         
+ |                            \ \   / /                  | \ | |                        
+ |                             \ \_/ /___   _   _  _ __  |  \| |  __ _  _ __ ___    ___ 
+ |                              \   // _ \ | | | || '__| | . ` | / _` || '_ ` _ \  / _ \
+ |                               | || (_) || |_| || |    | |\  || (_| || | | | | ||  __/
+ |                               |_| \___/  \__,_||_|    |_| \_| \__,_||_| |_| |_| \___|
+ ");
+                Console.ResetColor();
+
+          
+                Console.SetCursorPosition(57 - nameOfPlayer.Length / 2, 15);
+                Console.WriteLine(nameOfPlayer);
+
+                ConsoleKeyInfo key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.Enter)
+                    break;
+                if (key.Key == ConsoleKey.Backspace && nameOfPlayer.Length > 0)
+                {
+                    nameOfPlayer = nameOfPlayer.Substring(0, nameOfPlayer.Length - 1);
+                }
+                else
+                {
+                    nameOfPlayer += key.KeyChar;
+                } 
+            }
         }
 
         public static void ExitMenu()

@@ -37,24 +37,25 @@ namespace DungeonStuff
         */ //CHATGPT
 
 
-
-            // UNCOMMENT
             Console.CursorVisible = false;
-
+            ///* UNCOMMENT
+          
             bool Restart = true;
             bool restartStartMenu = true;
+            bool restartMainClassMenu = true;
 
             do {
-                Menu.selectedOption = 0; // if "Back to Menu" so we are at first option in menu
+                Menu.selectedOption = 0; 
                 do {
                     Menu.returnNum = -1;
                     Menu.MainMenu();
                     Menu.freshStart++;
-
+                    restartStartMenu = true; // fix : "Back to Menu"
+                    
                     if (Menu.returnNum >= 0 && Menu.returnNum <= 3) {
                         break;
                     }
-                    restartStartMenu = true; // fix : "Back to Menu" 
+                     
 
                 } while (Menu.key.Key != ConsoleKey.Escape);
 
@@ -63,63 +64,124 @@ namespace DungeonStuff
                     Restart = false; // Dead end
                 }
                 else
-                { // pokial enter a Menu.returnNum == 0 - 3
+                { // if enter and Menu.returnNum == 0 - 3
                     switch (Menu.returnNum) {
                         case 0:  // Start
-                            do {
+                            do 
+                            { 
                                 Menu.StartMenu();
-                                Console.WriteLine(Menu.returnNum);
+
                                 switch (Menu.returnNum)
                                 {
                                     case 0: // Normal
-                                        Restart = false;
+                                        Menu.selectedOption = 0;
+                                        Restart = true;
                                         restartStartMenu = false;
-                                        Console.WriteLine("Normal");
+                                        restartMainClassMenu = true; // fix : "Back to Difficulty"
+                                        
+                                        do
+                                        {
+                                            Menu.MainClassMenu();
+                                            switch (Menu.returnNum)
+                                            {
+                                                case 0: // Shadowfury Berserk
+                                                    Restart = false;
+                                                    restartStartMenu = false;
+                                                    restartMainClassMenu = false;
+
+                                                    Menu.mainClass = "Berserk"; // class set as Bers
+
+                                                    break;
+
+                                                case 1: // Undead Mage
+                                                    Restart = false;
+                                                    restartStartMenu = false;
+                                                    restartMainClassMenu = false;
+
+                                                    Menu.mainClass = "Mage"; // class set as Mage
+
+                                                    break;
+
+                                                case 2: // Lunar Shadow Healer
+                                                    Restart = false;
+                                                    restartStartMenu = false;
+                                                    restartMainClassMenu = false;
+                                                    
+                                                    Menu.mainClass = "Healer"; // class set as Healer
+
+                                                    break;
+
+                                                case 3: // Back to Difficulty
+                                                    Restart = false;
+                                                    restartStartMenu = true;
+                                                    restartMainClassMenu = false;
+                                                    Menu.selectedOption = 0; // if "Back to Difficulty" so we are at first option in menu
+                                                    //Menu.returnNum = -1;
+                                                    break;
+                                            }
+                                        }while (Menu.key.Key != ConsoleKey.Escape && restartMainClassMenu);;
                                         break;
-                                    
+
                                     case 1: // Hard
                                         Restart = false;
                                         restartStartMenu = false;
+                                        restartMainClassMenu = true; 
+                                        
+
+
                                         Console.WriteLine("Hard");
                                         Console.ReadKey();
                                         break;
-                                   
+
                                     case 2: // I N F E R N O
                                         Restart = false;
                                         restartStartMenu = false;
+                                        restartMainClassMenu = true;
+
+
+
                                         Console.WriteLine("I N F E R N O");
                                         Console.ReadKey();
                                         break;
-                                    
+
                                     case 3: // Back to menu
                                         Restart = true;
                                         restartStartMenu = false;
-                                        //Menu.returnNum = -1;
+                                        Menu.selectedOption = 0; // if "Back to Menu" so we are at first option in menu
+                                        Menu.returnNum = -1;
                                         break;
                                 }
-
-
-
                             } while (Menu.key.Key != ConsoleKey.Escape && restartStartMenu);
 
-                            
 
                             if (Menu.returnNum >= 0 && Menu.returnNum <= 3) {
                                 break;
                             }
 
-                            Console.ReadKey();
+
+                            //Console.ReadKey();
                             break;
 
                         case 1: // About
                             Console.WriteLine("About");
                             Console.ReadKey();
+
+                            /* explanation of letters on map 
+                            - B = boss
+                            - ? = treasure 
+
+                            etc.
+                            */
                             break;
 
 
                         case 2: // Settings
                             Console.WriteLine("Settings");
                             Console.ReadKey();
+
+                            // Main color ?
+                            // Fast output
+
                             break;
 
 
@@ -131,60 +193,16 @@ namespace DungeonStuff
                 }
 
             } while (Restart);
+  
 
-            /* here
-            do {
-                Menu.MainMenu();
-                Menu.freshStart++;
+            Menu.YourNameMenu();
+            
+            Console.ReadKey();
 
-                if (Menu.returnNum >= 0 && Menu.returnNum <= 4)
-                {
-                    break;
-                }
-
-            } while (Menu.key.Key != ConsoleKey.Escape);
-
-           
-            if (Menu.key.Key == ConsoleKey.Escape)
-            {
-                Menu.ExitMenu();
-            }
-           
-            switch (Menu.returnNum)
-            {
-                case 0:
-                    do
-                    {
-                        Menu.StartMenu();
-                    } while (Menu.key.Key != ConsoleKey.Escape);
-
-                    if (Menu.returnNum >= 0 && Menu.returnNum <= 4)
-                    {
-                        break;
-                    }
-
-                    Console.ReadKey();
-                    break;
-                case 1:
-                    
-                    Console.ReadKey();
-                    break;
-                case 2:
-                    
-                    Console.ReadKey();
-                    break;
-                case 3:
-                    Menu.ExitMenu(); // Exit
-                    break;
-
-            }
-
-            */
 
 
 
             Dice dice = new Dice(10);
-
 
             Berserk Berserk = new Berserk("Berserk", 120, 15, 30, dice, 50, 100);
 
@@ -202,16 +220,11 @@ namespace DungeonStuff
             //Console.WriteLine(Enemy.ReturnLastMessage());
             //Console.WriteLine(Berserk.ReturnLastMessage());
             //Console.WriteLine("Boss health bar: {0}", Enemy.GraphicHealth());
-
             Combat combat = new Combat(Berserk, Mage, Healer, Monster, dice);
 
-            //combat.Fight();
-            //Console.ReadKey();
-
+           
 
             
-
-
 
             ///////////////
             Console.CursorVisible = false; // Hide the cursor for better 
@@ -238,13 +251,7 @@ namespace DungeonStuff
             //////////////////////////
 
 
-
-
-
-
-            Console.Clear();
-            Console.WriteLine("jeba");
-            Console.ReadKey();
+            
         }
     }
 }

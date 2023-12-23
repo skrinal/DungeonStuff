@@ -8,17 +8,17 @@ namespace DungeonStuff
 {
     class Berserk : Character
     {
-        private int rage;
-        private int maxRage;
-        private int rageAttack;
-        private int rageDefense;
+        private int fury;
+        private int maxfury;
+        private int furyAttack;
+        private int furyDefense;
         
-        public Berserk(string name, int health, int attack, int defense, Dice dice, int rage, int rageAttack/*, int rageDefense*/) : base(name, health, attack, defense, dice)
+        public Berserk(string name, int health, int attack, int defense, Dice dice, int fury, int furyAttack/*, int furyDefense*/) : base(name, health, attack, defense, dice)
         {
-            this.rage = rage;
-            this.maxRage = rage;
-            this.rageAttack = rageAttack;
-            this.rageDefense = defense * 3;
+            this.fury = fury;
+            this.maxfury = fury;
+            this.furyAttack = furyAttack;
+            this.furyDefense = defense * 3;
         }
     }
 }
