@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj": {}
+    "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj": {
+    "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
+        "projectUniqueName": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
         "projectName": "DungeonStuff",
-        "projectPath": "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
-        "packagesPath": "C:\\Users\\Pocitac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pocitac\\Desktop\\DungeonStuff\\DungeonStuff\\DungeonStuff\\obj\\",
+        "projectPath": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\DungeonStuff.csproj",
+        "packagesPath": "C:\\Users\\Skrinal\\.nuget\\packages\\",
+        "outputPath": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pocitac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Skrinal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

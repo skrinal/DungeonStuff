@@ -6,6 +6,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DungeonStuff
 {
@@ -38,7 +39,7 @@ namespace DungeonStuff
 
 
             Console.CursorVisible = false;
-            ///* UNCOMMENT
+            /* UNCOMMENT
           
             bool Restart = true;
             bool restartStartMenu = true;
@@ -166,12 +167,12 @@ namespace DungeonStuff
                             Console.WriteLine("About");
                             Console.ReadKey();
 
-                            /* explanation of letters on map 
-                            - B = boss
-                            - ? = treasure 
+                            // explanation of letters on map 
+                            //- B = boss
+                           // - ? = treasure 
 
-                            etc.
-                            */
+                            //etc.
+                            
                             break;
 
 
@@ -198,7 +199,7 @@ namespace DungeonStuff
             Menu.YourNameMenu();
             
             Console.ReadKey();
-
+            */
 
 
 
@@ -222,11 +223,15 @@ namespace DungeonStuff
             //Console.WriteLine("Boss health bar: {0}", Enemy.GraphicHealth());
             Combat combat = new Combat(Berserk, Mage, Healer, Monster, dice);
 
-           
 
-            
 
-            ///////////////
+
+            Character[] allies = { Berserk, Mage, Healer };
+
+
+            Character[] enemy = { };
+
+
             Console.CursorVisible = false; // Hide the cursor for better 
 
             Map dungeonMap = new Map(20, 40);
@@ -237,6 +242,10 @@ namespace DungeonStuff
             {
                 dungeonMap.DisplayMap();
 
+                Character.AlliesOutput(allies);
+                Backpack.BackpackDraw();
+
+          
                 key = Console.ReadKey(true);
 
                 if (key.Key == ConsoleKey.Escape)

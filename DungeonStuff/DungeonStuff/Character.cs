@@ -49,14 +49,15 @@ namespace DungeonStuff
             return (health > 0);
         }
 
-        
+
+
         public string GraphicHealth()
         {
             string s = "[";
             int overall = 20;
             double count = Math.Round(((double)health / maxHealth) * overall); // Math calculation so health is estetic
 
-            if ((count == 0) && (Alive()))
+            if ((count == 0) && Alive())
             {
                 count = 1;
             }
@@ -67,25 +68,25 @@ namespace DungeonStuff
             }
             s = s.PadRight(overall + 1);
             s += "]";
-            
+
             return s;
         }
 
-        public void Attak (Character enemy)
+        public void Attak(Character enemy)
         {
             int hit = attack + dice.Throw();
             SetMessage(String.Format($"{name} attacks with a {hit} hp hit "));
             enemy.Defense(hit);
         }
 
-        public void Defense (int hit)
+        public void Defense(int hit)
         {
             int injury = hit - (defense + dice.Throw());  // injury = (dmg) - (defense + dice)
-            if ( injury > 0)
+            if (injury > 0)
             {
-                health -= injury; 
+                health -= injury;
                 message = String.Format($"{name} suffered damage {injury} hp ");
-                if ( health <= 0)
+                if (health <= 0)
                 {
                     health = 0;
                     message += "and died";
@@ -114,6 +115,26 @@ namespace DungeonStuff
         {
             return message;
         }
+
+
+
+        public static void AlliesOutput(Character[] characters)
+        {
+            Console.SetCursorPosition(13, 2);
+            Menu.ColorConsoleOutput(ConsoleColor.Green, "Allies");
+
+            
+            for (int i = 0; i < characters.Length; i++)
+            {
+                Console.SetCursorPosition(2, 5 + i + i);
+                string healthString = characters[i].GraphicHealth();
+                Console.WriteLine($"{characters[i]}: {healthString}");
+            }
+
+
+        }
+
+
     }
 
 }

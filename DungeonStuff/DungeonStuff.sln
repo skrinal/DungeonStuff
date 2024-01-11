@@ -17,6 +17,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{B0F5
 		DungeonStuff\Mage.cs = DungeonStuff\Mage.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enemy", "Enemy", "{91064A79-0838-4996-B201-DE1844690C5F}"
+	ProjectSection(SolutionItems) = preProject
+		DungeonStuff\Monster.cs = DungeonStuff\Monster.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{187E56AB-A5FF-47FD-B73F-D22E6E27B041}"
+	ProjectSection(SolutionItems) = preProject
+		DungeonStuff\Map.cs = DungeonStuff\Map.cs
+		DungeonStuff\Menu.cs = DungeonStuff\Menu.cs
+		DungeonStuff\Program.cs = DungeonStuff\Program.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{93FE6533-DDF4-4296-8E5D-2E4B329D83D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +47,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B0F51124-FDD4-4A09-B616-81644AB1B796} = {629576E2-FD56-40FC-96C6-D6707A34C809}
+		{91064A79-0838-4996-B201-DE1844690C5F} = {629576E2-FD56-40FC-96C6-D6707A34C809}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA5F684D-7733-4F1D-8683-02D8731DC75F}
