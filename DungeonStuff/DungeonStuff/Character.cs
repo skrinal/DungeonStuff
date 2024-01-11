@@ -120,20 +120,36 @@ namespace DungeonStuff
 
         public static void AlliesOutput(Character[] characters)
         {
-            Console.SetCursorPosition(13, 2);
+            Console.SetCursorPosition(15, 2);
             Menu.ColorConsoleOutput(ConsoleColor.Green, "Allies");
 
             
             for (int i = 0; i < characters.Length; i++)
             {
-                Console.SetCursorPosition(2, 5 + i + i);
+                Console.SetCursorPosition(4, 5 + i + i);
                 string healthString = characters[i].GraphicHealth();
                 Console.WriteLine($"{characters[i]}: {healthString}");
             }
 
 
         }
+        
+        public static void EnemyOutput(Character[] characters)
+        {
+            Console.SetCursorPosition(94, 2);
+            Menu.ColorConsoleOutput(ConsoleColor.Red, "Enemies");
 
+
+            for (int i = 0; i < characters.Length; i++)
+            {
+                Console.SetCursorPosition(80, 5 + i + i);
+                string healthString = characters[i].GraphicHealth();
+                Console.WriteLine($"{characters[i]}: {healthString}");
+            }
+
+
+        }
+        
 
     }
 

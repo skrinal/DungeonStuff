@@ -12,7 +12,10 @@ namespace DungeonStuff
 {
     class Program
     {
+        internal static readonly Character[] allies;
+        internal static readonly Character[] enemy;
         public static int dificulty;
+        public static int CombatMob;
         //public static bool restartStartMenu = true;
 
         /* CHATGPT - Console fullscrean
@@ -215,43 +218,98 @@ namespace DungeonStuff
             //Console.WriteLine("Mage: {0}", Mage.GraphicHealth());
             //Console.WriteLine("Healer: {0}", Healer.GraphicHealth());
 
-            Character Monster = new Character("Amirdrassil", 200, 40, 20, dice);  // Nova Super
+            Character M1 = new Character("Amirdrassil", 200, 40, 20, dice);  // Nova Super
                                                                                   // Enemy.Attak(Berserk);
 
             //Console.WriteLine(Enemy.ReturnLastMessage());
             //Console.WriteLine(Berserk.ReturnLastMessage());
             //Console.WriteLine("Boss health bar: {0}", Enemy.GraphicHealth());
-            Combat combat = new Combat(Berserk, Mage, Healer, Monster, dice);
+            Combat combat = new Combat(Berserk, Mage, Healer, M1, dice);
 
 
 
 
             Character[] allies = { Berserk, Mage, Healer };
-
-
-            Character[] enemy = { };
+            Character[] enemy = { M1 };
 
 
             Console.CursorVisible = false; // Hide the cursor for better 
 
             Map dungeonMap = new Map(20, 40);
 
-            ConsoleKeyInfo key;
+            //int playerRow = Map.playerRow + Console.WindowTop;
 
+
+            bool BackToMap = true;
+            bool Keepfighting = false;
+
+            ConsoleKeyInfo key;
+            
             do
             {
-                dungeonMap.DisplayMap();
+                while (BackToMap)
+                {
+                    int playerRow = Map.playerRow - Console.WindowTop;
+                    int playerCol = Map.playerCol - Console.WindowLeft;
+                    dungeonMap.DisplayMap();
 
-                Character.AlliesOutput(allies);
-                Backpack.BackpackDraw();
+                    Character.AlliesOutput(allies);
+                    Backpack.BackpackDraw();
 
-          
-                key = Console.ReadKey(true);
 
-                if (key.Key == ConsoleKey.Escape)
-                    break;
-                dungeonMap.MovePlayer(key);
-                
+                    Console.WriteLine("x: " + playerCol);
+                    Console.WriteLine("y: " + playerRow);
+
+                    key = Console.ReadKey(true);
+
+
+                    if (key.Key == ConsoleKey.Escape)
+                        break;
+                    dungeonMap.MovePlayer(key);
+
+                    if ((playerRow == 12) && ((playerCol == 8) || (playerCol == 9) || (playerCol == 10))) // m1
+                    {
+                        CombatMob = 1;
+                        BackToMap = false;
+                        break;
+                    }
+
+                    if (((playerRow >= 1 && playerRow <= 4)) && ((playerCol >= 1 && playerCol <= 7))) // BOSS
+                    {
+                        CombatMob = 2;
+                        BackToMap = false;
+                        break;
+                    }
+                }
+
+                switch (CombatMob)
+                {
+                    case 1: // m1
+                        Keepfighting = true;
+                        do
+                        {
+                            Console.Clear();
+                            Menu.MenuFrame();
+                            Character.AlliesOutput(allies);
+                            Character.EnemyOutput(enemy);
+                            Console.ReadKey();
+                        } while (Keepfighting);
+                        
+                        break;
+
+                    case 2: // BOSS
+                        Keepfighting = true;
+                        do
+                        {
+                            Console.Clear();
+                            Menu.MenuFrame();
+                            Character.AlliesOutput(allies);
+                            Character.EnemyOutput(enemy);
+                            Console.ReadKey();
+                        } while (Keepfighting);
+
+                        break;
+                }
                 
 
             } while (true);

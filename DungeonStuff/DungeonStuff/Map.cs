@@ -13,8 +13,8 @@ namespace DungeonStuff
         string[,] myMap;
 
         //
-        int playerRow;
-        int playerCol;
+        public static int playerRow;
+        public static int playerCol;
         //
 
         private int positionOfMapRow = 40;
@@ -83,9 +83,41 @@ namespace DungeonStuff
 
 
             ActuallyMap();
+            EnemyLocation();
 
         }
 
+
+        public void EnemyLocation()
+        {
+            //Boss
+            Console.SetCursorPosition(43, 8);
+            Menu.ColorConsoleOutput(ConsoleColor.DarkRed, "Boss");
+
+            // m1
+            Console.SetCursorPosition(49, 23);
+            Menu.ColorConsoleOutput(ConsoleColor.Red, "M");
+
+            // m2
+            Console.SetCursorPosition(49, 18);
+            Menu.ColorConsoleOutput(ConsoleColor.Red, "M");
+
+            // m3
+            Console.SetCursorPosition(62, 23);
+            Menu.ColorConsoleOutput(ConsoleColor.Red, "M");
+
+            // m4
+            Console.SetCursorPosition(72, 14);
+            Menu.ColorConsoleOutput(ConsoleColor.Red, "M");
+
+            // m5
+            Console.SetCursorPosition(69, 7);
+            Menu.ColorConsoleOutput(ConsoleColor.Red, "M");
+
+            // MS6
+            Console.SetCursorPosition(71, 23);
+            Menu.ColorConsoleOutput(ConsoleColor.DarkRed, "MS");
+        }
 
         public void ActuallyMap()
         {
@@ -478,6 +510,8 @@ namespace DungeonStuff
                 Console.BackgroundColor = ConsoleColor.Black;
             }
         }
+
+        
 
         //////////////////////
       

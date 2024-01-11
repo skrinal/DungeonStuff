@@ -26,19 +26,12 @@ namespace DungeonStuff
         }
 
 
-        private void Draw()  // Stav zpasu
+        public static void Fighting()  // Stav zpasu
         {
             Console.Clear();
-            Console.WriteLine("-------------- Arena -------------- \n");
-            Console.WriteLine("Your Characters: \n");
-            Console.WriteLine("{0} {1}", Berserk, Berserk.GraphicHealth());
-            Console.WriteLine("{0} {1}", Mage, Mage.GraphicHealth());
-            Console.WriteLine("{0} {1} \n", Healer, Healer.GraphicHealth());
 
-            Console.WriteLine("Enemy Mobs: \n");
-            Console.WriteLine("{0} {1} \n", Monster, Monster.GraphicHealth());
-
-            Console.WriteLine("Logs: \n");
+            Character.AlliesOutput(Program.allies);
+            Character.AlliesOutput(Program.enemy);
         }
 
 
@@ -48,7 +41,7 @@ namespace DungeonStuff
             Thread.Sleep(1000);
         }
 
-        
+        /*
         public void Fight()
         {
             Console.WriteLine("Welcome to the Arena!");
@@ -104,7 +97,7 @@ namespace DungeonStuff
                 Draw();
                 Console.WriteLine();
             }
-        }
+        }*/
     }
 
 }
