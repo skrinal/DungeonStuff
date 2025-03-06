@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DungeonStuff\\DungeonStuff\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\backpack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\backpack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\combat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\healer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\healer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\berserk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\berserk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|c:\\dungeonstuff\\dungeonstuff\\dungeonstuff\\mage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2051C237-B2E1-4EF4-83B7-4D1FCB4479F7}|DungeonStuff\\DungeonStuff.csproj|solutionrelative:dungeonstuff\\mage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Program.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Program.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Program.cs",
+              "RelativeToolTip": "DungeonStuff\\Program.cs",
+              "ViewState": "AQIAABsBAAAAAAAAAAAAAMwAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Character.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Character.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Character.cs",
+              "RelativeToolTip": "DungeonStuff\\Character.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAiwIoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Map.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Map.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Map.cs",
+              "RelativeToolTip": "DungeonStuff\\Map.cs",
+              "ViewState": "AQIAAN8BAAAAAAAAAAAAAPUBAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Combat.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Combat.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Combat.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Combat.cs",
+              "RelativeToolTip": "DungeonStuff\\Combat.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAwwCEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Backpack.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Backpack.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Backpack.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Backpack.cs",
+              "RelativeToolTip": "DungeonStuff\\Backpack.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-11T17:14:40.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Menu.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Menu.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Menu.cs",
+              "RelativeToolTip": "DungeonStuff\\Menu.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowDIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Monster.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Monster.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Monster.cs",
+              "RelativeToolTip": "DungeonStuff\\Monster.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-27T01:39:21.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Berserk.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Berserk.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Berserk.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Berserk.cs",
+              "RelativeToolTip": "DungeonStuff\\Berserk.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Healer.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Healer.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Healer.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Healer.cs",
+              "RelativeToolTip": "DungeonStuff\\Healer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Mage.cs",
+              "DocumentMoniker": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Mage.cs",
+              "RelativeDocumentMoniker": "DungeonStuff\\Mage.cs",
+              "ToolTip": "C:\\DungeonStuff\\DungeonStuff\\DungeonStuff\\Mage.cs",
+              "RelativeToolTip": "DungeonStuff\\Mage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-24T10:18:33.797Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 139,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

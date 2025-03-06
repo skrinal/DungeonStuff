@@ -40,3 +40,4 @@ C:\Users\Pocitac\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0
 C:\Users\Pocitac\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.pdb
 C:\Users\Pocitac\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.genruntimeconfig.cache
 C:\Users\Pocitac\Desktop\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\ref\DungeonStuff.dll
+C:\DungeonStuff\DungeonStuff\DungeonStuff\obj\Debug\net6.0\DungeonStuff.sourcelink.json

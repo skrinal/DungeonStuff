@@ -42,7 +42,7 @@ namespace DungeonStuff
 
 
             Console.CursorVisible = false;
-            /* UNCOMMENT
+            ///* UNCOMMENT
           
             bool Restart = true;
             bool restartStartMenu = true;
@@ -202,7 +202,7 @@ namespace DungeonStuff
             Menu.YourNameMenu();
             
             Console.ReadKey();
-            */
+            //*/
 
 
 
