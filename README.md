@@ -1,8 +1,3 @@
-BIG W SHORTCUTS
-- Ctrl + h = replace all same words;
-- F5 compile
-- ctrl + shift + F5 = reload
-
 
 TO DO LIST
 - If Normal, Hard, Inferno choosen assigne value to INT and make multiplayers
